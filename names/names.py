@@ -18,6 +18,24 @@ for name_1 in names_1:
         if name_1 == name_2:
             duplicates.append(name_1)
 
+
+ '''
+Using binary search tree and the insert+append methods for stacks 
+'''
+from binary_search_tree import BinarySearchTree
+# Inserting the values into the tree
+bst = BinarySearchTree(names_1[0])
+for name in names_1:
+    bst.insert(name)
+duplicates = []
+# using pythons .contains and getting any names that are in the binary search tree and appending them to 
+    # the list of duplicates
+for name in names_2:
+    if bst.contains(name):
+        duplicates.append(name)     
+
+
+
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
