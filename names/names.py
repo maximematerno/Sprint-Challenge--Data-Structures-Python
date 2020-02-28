@@ -19,9 +19,7 @@ for name_1 in names_1:
             duplicates.append(name_1)
 
 
- '''
-Using binary search tree and the insert+append methods for stacks 
-'''
+'''Using binary search tree and the insert+append methods for stacks '''
 from binary_search_tree import BinarySearchTree
 # Inserting the values into the tree
 bst = BinarySearchTree(names_1[0])
